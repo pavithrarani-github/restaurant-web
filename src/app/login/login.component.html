@@ -1,0 +1,48 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-3">
+                
+                      <div class="text-center mt-4 mb-2"><h4>Login to your account</h4></div>
+                        <form [formGroup]="LoginForm" (ngSubmit)="OnLogin(LoginForm.value)">
+                    
+                       <!-- phonenumber -->
+                       <div class="form-floating col mb-2">
+                        <input type="text" name="Phonenumber"  class="form-control"formControlName="Phonenumber"/>
+                        <label for ="floatingInput">PhoneNumber</label>
+                        <!-- display error start -->
+                        <div *ngIf="check.Phonenumber.invalid && (check.Phonenumber.touched || check.Phonenumber.dirty)">
+                           <span class="text-danger" 
+                           *ngIf="check.Phonenumber.errors?.required">*Phonenumber is required</span>
+                           <span class="text-danger" 
+                           *ngIf="check.Phonenumber.errors?.pattern">*Enter valid Phonenumber</span>
+                           </div>
+                           
+                       <!-- display error end -->
+                       </div>
+                
+                         <!-- Password -->
+                         <div class="form-floating mb-2">
+                            <input type="password"name="Password"   class="form-control"formControlName="Password" value="">
+                            <label for="floatingInput">Password</label>
+                            <!-- display error start -->
+                            <div *ngIf="check.Password.invalid && (check.Password.touched || check.Password.dirty)">
+                               <span class="text-danger" 
+                               *ngIf="check.Password.errors?.required">*Password is required</span>
+                               <span class="text-danger" 
+                               *ngIf="check.Password.errors?.minlength">*Password must have 6 characters</span>
+                           
+                               </div>
+                               <!-- display error end -->
+                           </div>
+                        <button type="submit" class="btn mt-6">Login</button>
+                        <p><a href="">Forgot password?</a></p>
+                        <p class="para">New on this site?<a routerLink="/signup">Signup</a></p>
+                    </form> 
+                </div>
+                </div>
+                </div>
+            </div>
+
+</body>

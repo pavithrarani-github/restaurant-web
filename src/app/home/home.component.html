@@ -1,0 +1,51 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h2>Welcome!</h2>
+        <p>Let Us Serve You Better</p>
+        <a routerLink="./menu">Order Now</a>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h2>Welcome!</h2>
+        <p>Let Us Serve You Better</p>
+        <a routerLink="./menu">Order Now</a>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h2>Welcome!</h2>
+        <p>Let Us Serve You Better</p>
+        <a routerLink="./menu">Order Now</a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <div class="special">
+    <h2 class="text-center">Special from our kitchen</h2>
+  </div>
+
+  <!--foodbox-->
+  <div class="container mt-4 mb-4">
+    <div class="row">
+       <div class="col-lg-3" *ngFor="let fd of FoodData;index as i">
+         <div class="foodbox" *ngIf ="i<=3">
+           <img src ="{{fd.foodImg}}"/>
+           <h1>{{fd.foodName}}</h1>
+           <p>{{fd.foodPrice | currency:"INR"}}</p>
+         </div>
+        
+       </div>
+  </div>
+   <a routerLink="/menu" class="viewmorebtn">View more</a>
+
+  </div>

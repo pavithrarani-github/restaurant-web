@@ -1,0 +1,45 @@
+body{
+    margin-top:0;
+    padding:0;
+    background-image: url('../../assets/chickenfry.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:130vh;
+    overflow: hidden;
+}
+.container{
+    margin:6% auto;
+   
+}
+.card{
+    border:2px solid var(--primary-color);
+    padding:20px 20px;
+    border-radius: 10px;
+}
+h4{
+    color:var(--primary-color);
+}
+.btn{
+    width: 50%;
+    background-color: var(--primary-color);
+    color:#fff;
+    margin-left:25%;
+    border-radius: 5px;
+    border: none;
+}
+.para{
+    color:var(--primary-color);
+}
+a{
+    color:var(--secondary-color);
+}
+a:hover{
+    color:var(--primary-color);
+}
+.text-danger{
+    color:red;
+    font-size: 10px;
+}
+
+

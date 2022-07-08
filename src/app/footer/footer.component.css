@@ -1,0 +1,26 @@
+.footer{
+    background-color: var(--secondary-color);
+    padding:10px;
+    position:sticky;
+    top: 120%;
+    overflow: hidden;
+}
+.content{
+    color:snow;
+    font-size: 13px;
+    text-decoration: none;
+    display:block;
+    padding:5px;
+    font-family: monospace;
+
+}
+.bi{
+    display:inline;
+    color:#fff;
+    font-size: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    }
+.content:hover , .bi:hover{
+    color:var(--primary-color);
+}
